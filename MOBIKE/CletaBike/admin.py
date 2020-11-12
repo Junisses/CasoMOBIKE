@@ -14,9 +14,7 @@ class bicicletaAdmin(admin.ModelAdmin):
                            'patente']
                            
     search_fields       = ['modelo',
-                           'patente',
-                           'fechaIngreso',
-                           'desbloqueo']
+                           'patente']
 admin.site.register(Bicicleta, bicicletaAdmin)   
 
 class administrativoAdmin(admin.ModelAdmin):
@@ -43,11 +41,10 @@ class usuarioAdmin(admin.ModelAdmin):
                       'medioPago'] 
 
     list_display_filter = ['rutUser',
-                           'medioPago']
+                           'dniUser']
                            
     search_fields       = ['rutUser',
                            'nomUser',
-                           'correo',
                            'correo']
 admin.site.register(, administrativoAdmin)
 
@@ -55,9 +52,6 @@ class registroPagoAdmin(admin.ModelAdmin):
     list_display   = ['dniUser'] 
 
     list_display_filter = ['fechaPago',
-                           'metodoPago']
-                           
-    search_fields       = ['fechaPago',
                            'metodoPago']
 admin.site.register(RegistroPago, registroPagoAdmin)
 
@@ -68,11 +62,9 @@ class arriendoAdmin(admin.ModelAdmin):
                       'fechaPago',
                       'horaArriendo'] 
 
-    list_display_filter = ['rutAdmin',
-                           'nomAdmin']
+    list_display_filter = ['rutUser']
                            
     search_fields       = ['idRegistroPago',
                            'idBicleta',
-                           'correo',
                            'fechaPago']
 admin.site.register(Arriendo, arriendoAdmin)

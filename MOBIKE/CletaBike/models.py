@@ -1,9 +1,5 @@
 from django.db import models
 # Create your models here.
-<<<<<<< HEAD
-
-
-=======
 #Las ID se generan automaticamente
 
 class Bicicleta(models.Model):
@@ -54,4 +50,3 @@ class Arriendo(models.Model):
 
     def __str__(self):
         return self.rutUser
->>>>>>> 6b831dcdb918840db98935b24b5463817b501895
